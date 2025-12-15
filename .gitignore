@@ -1,0 +1,69 @@
+# =====================
+# OS / Editor junk
+# =====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# =====================
+# Python / Backend
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.env.*
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# =====================
+# Frontend / Node
+# =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite / React build output
+frontend/dist/
+frontend/.vite/
+
+# =====================
+# Environment & secrets
+# =====================
+.env
+.env.local
+.env.production
+.env.development
+
+# =====================
+# Data & generated files
+# =====================
+*.csv
+!backend/ctg_data.csv   # keep ONLY if you actually want this tracked
+
+# =====================
+# Testing & coverage
+# =====================
+coverage/
+.pytest_cache/
+
+# =====================
+# Misc
+# =====================
+*.tmp
+*.bak

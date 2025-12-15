@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Body Styles */
+body {
+    @apply bg-akatsuki-black text-gray-200 font-ninja;
+    /* subtle dark gradient to give depth */
+    background-image: linear-gradient(to bottom right, #050505, #1a0505);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Custom Akatsuki Scrollbar --- */
+/* Works in Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090909;
+    border-left: 1px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5e0d1a; /* Darker red */
+    border-radius: 5px;
+    border: 2px solid #090909;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C41E3A; /* Bright Akatsuki red on hover */
+}
+
+/* --- Utility Classes for the Theme --- */
+
+/* Glassmorphism card effect for panels */
+.akatsuki-card {
+    @apply bg-akatsuki-darkgrey border-2 border-akatsuki-red/30 rounded-md shadow-lg shadow-red-900/20 backdrop-blur-sm bg-opacity-95;
+    transition: all 0.3s ease-in-out;
+}
+
+.akatsuki-card:hover {
+    @apply border-akatsuki-red/60 shadow-red-600/20;
+}
+
+/* Text Glow Effect for metrics */
+.glow-text {
+    text-shadow: 0 0 10px rgba(196, 30, 58, 0.6);
+}
+
+/* Chart Container adjustments */
+canvas {
+    max-height: 100%;
+    width: 100%;
+}

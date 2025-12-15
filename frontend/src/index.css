@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-akatsuki-black text-gray-200 font-ninja;
+    background-image: linear-gradient(to bottom right, #000000, #1a0505);
+    min-height: 100vh;
+}
+
+/* Custom Scrollbar for the aesthetic */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090909;
+}
+::-webkit-scrollbar-thumb {
+    background: #C41E3A;
+    border-radius: 4px;
+}
+
+.akatsuki-card {
+    @apply bg-akatsuki-darkgrey border-2 border-akatsuki-red/30 rounded-md shadow-lg shadow-red-900/20 backdrop-blur-sm bg-opacity-90;
+    transition: all 0.3s ease-in-out;
+}
+
+.akatsuki-card:hover {
+    @apply border-akatsuki-red/80 shadow-red-600/30;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(196, 30, 58, 0.7);
+}
