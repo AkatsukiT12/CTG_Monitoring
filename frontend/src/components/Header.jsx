@@ -13,7 +13,8 @@ const Header = ({ isStreaming, hasStarted, onToggle, onReset, onSave }) => {
                 />
                 <div>
                     <h1 className="text-3xl font-bold text-akatsuki-red glow-text tracking-wider">Akatsuki</h1>
-                    <h2 className="text-xl text-gray-300 uppercase tracking-widest">CTG Heart Failure Monitoring</h2>
+                    <h2 className="text-xl text-gray-300 uppercase tracking-widest">Intrapartum Fetal Monitoring</h2>
+                    <p className="text-xs text-gray-500 mt-1">Cardiotocography (CTG) • Fetal Distress Detection</p>
                 </div>
             </div>
 
@@ -29,7 +30,7 @@ const Header = ({ isStreaming, hasStarted, onToggle, onReset, onSave }) => {
                         className="px-4 py-2 bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white border border-gray-600 rounded transition-all text-sm uppercase tracking-wide font-bold flex items-center gap-2"
                         title="Download CSV Report"
                     >
-                        <span>💾</span> Save
+                        <span>💾</span> Save Report
                     </button>
 
                     {hasStarted && (
@@ -50,8 +51,8 @@ const Header = ({ isStreaming, hasStarted, onToggle, onReset, onSave }) => {
                         }`}
                     >
                         {isStreaming
-                            ? "Pause Visual"
-                            : (hasStarted ? "Resume Jutsu" : "Start Monitor")}
+                            ? "Pause Monitor"
+                            : (hasStarted ? "Resume Monitor" : "Start Monitor")}
                     </button>
                 </div>
             </div>

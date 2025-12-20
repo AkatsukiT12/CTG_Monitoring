@@ -32,11 +32,12 @@ function App() {
                 return;
             }
 
-            const headers = ["Start Time (s)", "End Time (s)", "Duration (s)", "Condition", "Severity", "Clinical Notes"];
+            const headers = ["Start Time (s)", "End Time (s)", "Duration (s)", "CTG Category", "Condition", "Severity", "Clinical Notes"];
             const rows = report.map(r => [
                 r.start_time,
                 r.end_time,
                 r.duration_sec,
+                r.ctg_category,
                 `"${r.condition}"`,
                 r.severity,
                 `"${r.clinical_notes}"`
@@ -47,7 +48,7 @@ function App() {
             const link = document.createElement("a");
             const url = URL.createObjectURL(blob);
             link.setAttribute("href", url);
-            link.setAttribute("download", `Akatsuki_Report_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute("download", `Akatsuki_CTG_Report_${new Date().toISOString().slice(0,10)}.csv`);
             link.style.visibility = 'hidden';
             document.body.appendChild(link);
             link.click();
@@ -139,16 +140,20 @@ function App() {
 
             <main className="container mx-auto px-4 mt-8">
                 <ProgressBar progress={progress} flags={flags} totalDuration={totalDuration} onJump={handleJump} />
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2">
+
+                {/* COMPACT LAYOUT: Full-width chart + metrics, floating interpretation */}
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                    <div className="lg:col-span-3">
                         <CTGChart data={chartData} />
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="lg:col-span-1">
                         <MetricsPanel metrics={analysis} />
-                        <InterpretationPanel metrics={analysis} />
                     </div>
                 </div>
             </main>
+
+            {/* FLOATING INTERPRETATION PANEL */}
+            <InterpretationPanel metrics={analysis} />
         </div>
     );
 }
