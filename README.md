@@ -1,8 +1,20 @@
+<div align="center">
+
+<img src="akatsuki_logo.png" alt="Akatsuki CTG Logo" width="120" height="120"/>
+
 # ☁️ Akatsuki CTG Monitor
 
 > *"Time doesn't heal anything, it just teaches us how to live with pain."*
 
-A high‑performance, real‑time **Cardiotocography (CTG)** analysis tool wrapped in an immersive **Akatsuki‑themed interface**.
+### High-performance, real-time Cardiotocography (CTG) analysis<br>wrapped in an immersive Akatsuki-themed interface
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+
+</div>
 
 ---
 
