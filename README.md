@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="akatsuki_logo.png" alt="Akatsuki CTG Logo" width="120" height="120"/>
+<img src="frontend/public/akatsuki_logo.png" alt="Akatsuki CTG Logo" width="120" height="120"/>
 
 # ☁️ Akatsuki CTG Monitor
 
